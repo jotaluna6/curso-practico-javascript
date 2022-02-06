@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba con figuras</title>
+    <style>
+    :root {
+        --white: #FFFFFF;
+        --black: #000000;
+        --dark: #232830;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+        }     
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }              
+    .item1 { grid-area: header;
+            font-size: var(--lg); 
+            background-color:  peru; } important
+    .item2 { grid-area: cuadra; }
+    .item3 { grid-area: triang; }
+    .item4 { grid-area: circulo; }
+    
+    .grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header header'
+  'cuadra  triang circulo'
+  'cuadra  triang circulo'
+  'cuadra  triang circulo'
+  'cuadra  triang circulo';
+  grid-gap: 5px;
+  background-color: peru;
+  padding: 10px;
+
+}
+.numero{
+    width: 120px;
+    height: 20px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.perimetro-button {
+            margin-left: 10px;
+        }
+.area-button {
+            margin-right: 10px;
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+.button{
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    width: 100X;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    display: inline-block;
+    margin-left: 30px;
+}        
+
+.form{
+    display: flex;
+    flex-direction: row;
+}
+
+    </style>
+</head>
+<body>
+    <script src="./figuras.js"></script>
+    <h1>Figuras Geométricas</h1>
+
+    <p>Buenas, le cálculo a su voluntad el perímetro y/o el área de</p>
+    <p>las figuras aqui incluídas.</p>
+    <p>Ingrese los valores necesarios.</p>
+    
+    <div class="grid-container">
+      <div class="item1">Perímetros y Areas</div>
+      <div class="item2">
+        <section class="cuadrado">
+                <h2>Cuadrado</h2>
+                <div class="form-container">
+                <form action="">
+                    <label for="ladoCuad">Ingresa el largo del lado:</label>
+                    <input id="ladoCuad" class="numero" type="number">
+                    <button type="button" class="perimetro-button button" onclick="calcularPerimetroCuadrado()">
+                        calcular perimetro</button>
+                    <button type="button" class="area-button button" onclick="calcularAreaCuadrado()">
+                        Calcular el area</button>
+                </form>
+                </div>
+        </section>
+ 
+    </div>
+    <div class="item3">
+        <section class="triangulo">
+            <h2>Triangulo</h2>
+            <div class="form-container">
+              <form action="" class="form">
+                <label for="lado1Tri">Lado 1:</label>
+                <input id="lado1Tri" class="numero" type="number">
+                <label for="lado2Tri">Lado 2:</label>
+                <input id="lado2Tri" class="numero" type="number">
+                <label for="lado3Tri">Lado 3:</label>
+                <input id="lado3Tri" class="numero" type="number">
+              </form>
+              <button type="button" class="perimetro-button button" onclick="calcularPerimetroTriangulo()">
+                calcular perimetro</button>
+            <button type="button" class="area-button button" onclick="calcularAreaTriangulo()">
+                Calcular el area</button>
+            </div>
+        </section>
+    </div>
+    <div class="item4">
+        <section class="circulo">
+            <h2>Circulo</h2>
+            <div class="form-container">
+                <form action="">
+                  <label for="radioCir">Ingresa el radio:</label>
+                  <input id="radioCir" type="number">
+                  <button type="button" class="perimetro-button button" onclick="calcularCircunferencia()">
+                      calcular perimetro</button>
+                  <button type="button" class="area-button button" onclick="calcularAreaCirculo()">
+                      Calcular el area</button>
+                </form>
+              </div>
+        </section>
+    </div>
+
+</body>
+</html>
