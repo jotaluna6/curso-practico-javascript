@@ -46,5 +46,11 @@ const salariosCol= colombia.map(
         return tipo.salary;
     })
 
+salariosOrd= salariosCol;
+salariosOrd.sort(function(a, b){return a-b});
+let cuantos = (salariosOrd.length * .9);
+const top10 = salariosOrd.slice(cuantos, salariosCol.length-1)
+
 
 console.log(calcularMediana(salariosCol));
+console.log(calcularMediana(top10));

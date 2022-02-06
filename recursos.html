@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llegamos?</title>
+    <link rel="stylesheet" href="recursos.css">
+</head>
+<body>
+    <div class="big-container">
+        <p id="fecha"></p>
+        <p id="restan"></p>
+        <div class="form-container"> 
+            <form action="/" class="form"> 
+            <div class="container">
+                <label for="recMes">Recaudación del mes</label>
+                <input id="recMes" class="item" type="number">
+                <label for="fijMes">Gastos Fijos </label>
+                <input id="fijMes" class="item" type="number">
+                <label for="varMes">Gastos variables </label>
+                <input id="varMes" class="item" type="number">
+                </div>
+            </form>    
+            <button type="button" class="area-button" onclick="calcularFaltante()">
+                Calcular Faltante</button>
+            <p id="linea1" class="result"></p>
+            <p id="linea2" class="result"></p>
+            <p id="linea3" class="result"></p>
+        </div>
+    </div>
+    <script src="./recursos.js"></script> 
+</body>
+</html>
